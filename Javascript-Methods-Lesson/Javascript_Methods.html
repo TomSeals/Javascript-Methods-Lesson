@@ -1,0 +1,187 @@
+<html>
+<head>
+  <title>Javascript Bare</title>
+</head>
+<body>
+
+<script type="text/javascript">
+// 1.1
+  // var pet = {
+  //   hunger: 2,
+  //   feed: function() {
+  //     this.hunger -= 1;
+  //   }
+  // };
+  // pet.feed();
+  // pet.feed();
+  // console.log('Pet hunger should be zero:', pet.hunger);
+
+// -----------------------
+
+// 1.2
+// var pancakeHouse = {
+// 	makePancake: function() {
+// 		return {foodType: 'pancake'};
+// 	}
+// };
+// var pancake = pancakeHouse.makePancake();
+// console.log('Pancake should be a pancake:', pancake.foodType);
+
+// ----------------------
+
+// Partner Exercise 1.1
+// var juggler = {
+//   itemCount: 0,
+//   // This returns the number of items dropped
+//   juggle: function() {
+//     this.itemCount += 1;
+//     var fate = parseInt(Math.random() * 10);
+//     if (this.itemCount > 2 && fate % 2 === 0) {
+//       this.drop();
+//       // Uh oh! The juggler dropped an item
+//       return 1;
+//     }
+//     else {
+//       // A skilled juggler! He dropped zero items
+//       return 0;
+//     };
+//   },
+//   drop: function() {
+//     console.log('ah!');
+//     this.itemCount = this.itemCount - 1;
+//   }
+// };
+
+// juggler.juggle();
+// juggler.juggle();
+// console.log('Juggler should be juggling two items:', juggler.itemCount);
+
+// var dropCount = 0;
+
+// dropCount += juggler.juggle();
+// dropCount += juggler.juggle();
+// dropCount += juggler.juggle();
+
+// console.log('Total number of items should be 5:', juggler.itemCount + dropCount);
+// console.log('Juggler should be juggling at least two items:', juggler.itemCount);
+// ------------------------
+
+// http://learn.themakersquare.com/pages/immersive/week-3/javascript-this
+// Partner Exercise 1.1
+// var bagOfChips = {
+//   count: 2,
+//   takeChip: function() {
+//     if (this.count == 0) {
+//       alert('No chips left!');
+//     }
+//     else {
+//       this.count = this.count - 1;
+//       alert('munch');
+//     }
+//   }
+// };
+// bagOfChips.takeChip();
+// bagOfChips.takeChip();
+// bagOfChips.takeChip();
+// -----------------------------
+// partner exercise 1.3
+
+// var water = function (amount) {
+//   this.happiness += amount;
+//   console.log('You watered the ' + this.plantType);
+// };
+
+// var greenHouse = {
+//   room1: {
+//     plantType: 'strawberries',
+//     happiness: 3,
+//     water: water
+//   },
+//   room2: {
+//     plantType: 'eggplants',
+//     happiness: 1,
+//     water: water
+//   }
+// };
+
+// greenHouse.room1.water(2);
+// console.log('Strawberries should have 5 happiness:', greenHouse.room1.happiness);
+
+// greenHouse.room2.water(23);
+// console.log('Eggplants should have 24 happiness:', greenHouse.room2.happiness);
+// ---------------------------
+// partner exercise 1.2
+// var sprayPixieDust = function (person) {
+  
+//   person.pixieDust += 1;
+// };
+
+// var wendy = {
+// 	pixieDust: 0,
+//   fly: function () {
+//     if (this.pixieDust < 2) {
+//       return 'thump!';
+//     }
+//     else {
+//       return 'I can fly!';
+//     }
+//   }
+// };
+
+// console.log('Wendy should not be able to fly (yet):', wendy.fly());
+
+// sprayPixieDust(wendy);
+// console.log('Wendy should STILL not be able to fly:', wendy.fly());
+
+// sprayPixieDust(wendy);
+// console.log('Can she fly now?', wendy.fly());
+// --------------------------------
+// Partner Exercise 2.1
+
+// var wishingWell = {
+//   coinCount: 2,
+//   wishToss: function () {
+//     this.coinCount += 1;
+//   },
+//   stealCoins: function (x) {
+//   	this.coinCount -= x;
+//   	if (this.coinCount < 0) {
+//   		this.coinCount = 0;
+//   	}
+
+//   }
+// };
+
+// wishingWell.wishToss();
+// console.log('Wishing well should have 3 coins:', wishingWell.coinCount);
+
+// wishingWell.stealCoins(2);
+// console.log('Wishing well should have 1 coin:', wishingWell.coinCount);
+
+// wishingWell.stealCoins(5);
+// console.log('Wishing well should have 0 coins:', wishingWell.coinCount);
+// ---------------
+
+
+// Partner Exercise 2.2
+
+// var musicPlayer = {
+//   currentlyPlaying: null,
+//   play: function (song) {
+//   	this.currentlyPlaying = song;
+//   }
+// };
+
+// musicPlayer.play('Giant Steps');
+// console.log('Music player should be playing "Giant Steps":', musicPlayer.currentlyPlaying);
+
+// musicPlayer.play('Blue Glasses');
+// console.log('Music player should be playing "Blue Glasses":', musicPlayer.currentlyPlaying);
+// ------------------------
+
+Partner Exercise 2.3
+
+</script>
+
+</body>
+</html>
