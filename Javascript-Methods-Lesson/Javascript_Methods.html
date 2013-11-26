@@ -179,7 +179,31 @@
 // console.log('Music player should be playing "Blue Glasses":', musicPlayer.currentlyPlaying);
 // ------------------------
 
-Partner Exercise 2.3
+// Partner Exercise 2.3
+
+var revealSecret = function () {
+  return this.secret;
+};
+
+var incept = function (person, func) {
+  person.inception = func;
+  var result = person.inception();
+  alert(person.name + " said: " + result);
+};
+
+var spy = {
+  name: "Mr. Smith",
+  secret: "I like pie"
+};
+
+incept(spy, revealSecret);
+
+var otherSpy = {
+  name: "Dr. Tran",
+  secret: "I can lick my elbow"
+};
+
+incept(otherSpy, revealSecret);
 
 </script>
 
